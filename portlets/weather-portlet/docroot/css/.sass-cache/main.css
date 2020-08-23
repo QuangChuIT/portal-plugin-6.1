@@ -1,0 +1,32 @@
+.weather-container {
+  width: 122px;
+  height: 79px;
+  padding: 20px 0px; }
+
+.weather-container select {
+  border: none;
+  box-shadow: none !important;
+  outline: none !important;
+  width: 100%;
+  color: #000; }
+
+.weather-container table {
+  padding-top: 10px; }
+
+.weather-container select:FOCUS {
+  border: none !important;
+  color: #000; }
+
+.temperature-detail .tbl-info p {
+  margin: 0 !important; }
+
+.temperature-detail .tbl-info td {
+  vertical-align: middle; }
+
+.temperature-detail .tbl-info td .bigTemp {
+  font-size: 35px;
+  padding-left: 5px; }
+
+.temperature-detail .tbl-info tbody tr td:FIRST-CHILD {
+  padding: 10px 0px; }
+

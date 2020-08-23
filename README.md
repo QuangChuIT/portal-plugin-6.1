@@ -1,1 +1,1 @@
-# portal-plugin-6.1
+# portal-egov-plugin-ga2

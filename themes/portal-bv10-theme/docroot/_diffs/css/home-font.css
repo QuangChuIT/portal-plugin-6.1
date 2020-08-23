@@ -1,0 +1,52 @@
+@font-face {
+    font-family: 'NotoSerif-Regular';
+    src: url(../fonts/NotoSerif-Regular.ttf);
+}
+@font-face {
+    font-family: 'NotoSerif-Bold';
+    src: url(../fonts/NotoSerif-Bold.ttf);
+}
+@font-face {
+    font-family: 'Helvetica_Regular';
+    src: url(../fonts/Helvetica.ttf);
+}
+@font-face {
+    font-family: 'Helvetica_Bold';
+    src: url(../fonts/Helvetica-Bold.ttf);
+}
+@font-face {
+    font-family: 'Arial_Regular';
+    src: url(../fonts/Arial_Regular.ttf);
+}
+@font-face {
+    font-family: 'Arial_Bold';
+    src: url(../fonts/Arial-Bold.ttf);
+}
+@font-face {
+    font-family: 'OpenSans-Italic';
+    src: url(../fonts/OpenSans-Italic.ttf);
+}
+@font-face {
+    font-family: 'MyriadPro-Regular';
+    src: url(../fonts/MyriadPro-Regular.ttf);
+}
+@font-face {
+    font-family: 'Opensans-Semibold';
+    src: url(../fonts/Opensans-Semibold.ttf);
+}
+@font-face {
+    font-family: 'OpenSans-Bold';
+    src: url(../fonts/OpenSans-Bold.ttf);
+}
+@font-face {
+    font-family: 'SF-UI-Display-Heavy';
+    src: url(../fonts/SF-UI-Display-Heavy.otf);
+}
+@font-face {
+    font-family: 'OpenSans-Regular';
+    src: url(../fonts/OpenSans-Regular.ttf);
+}
+@font-face {
+    font-family: 'Verdana-Regular';
+    src: url(../fonts/Verdana-Regular.ttf);
+}

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.1.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_1_0.dtd">
+<service-builder package-path="com.bkav.portlet.article.link" auto-namespace-tables="false">
+	<author>quangcv</author>
+	<namespace>article</namespace>
+
+	<entity name="ArticleLinkEntry" local-service="true" remote-service="true">
+
+		<!-- PK fields -->
+
+		<column name="entryId" type="long" primary="true" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+		<column name="publishDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="title" type="String" />
+		<column name="link" type="String" />
+		<column name="description" type="String" />
+		<column name="status" type="boolean" />
+		<column name="urlTitle" type="String" />
+			
+		<!-- Order -->
+
+		<order by="desc">
+			<order-column name="publishDate" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="Company" return-type="Collection">
+			<finder-column name="companyId" />
+		</finder>
+		
+		<finder name="CompanyAndStatus" return-type="Collection">
+			<finder-column name="companyId" />
+			<finder-column name="status" />
+		</finder>
+		
+		<finder name="Status" return-type="Collection">
+			<finder-column name="status" />
+		</finder>
+	</entity>
+</service-builder>

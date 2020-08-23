@@ -1,0 +1,1 @@
+Liferay.Service.register("Liferay.Service.article", "com.bkav.portlet.article.link.service", "article-link-portlet");

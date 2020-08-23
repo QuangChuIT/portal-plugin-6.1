@@ -1,0 +1,79 @@
+<div class="navigation">
+	<div class="search-wrapper">
+		$theme.search()
+	</div>
+	<ul id="navigation-menu" class="sf-navbar">	
+		#set ($counter=0)
+		#set ($drop = 0)
+		#foreach ($nav_item in $nav_items)
+			#set ($counter = $counter + 1)
+			#if($counter==1)
+				#if ($nav_item.isSelected())
+					<li class="first-nav-item selected">
+				#else
+					<li class="first-nav-item">
+				#end
+			#else
+				#if ($nav_item.isSelected())
+					<li class="selected">
+				#else
+					<li>
+				#end
+			#end
+				#if ($nav_item.hasChildren())
+					<a href="$nav_item.getURL()" class="drop-addon">
+						$nav_item.icon() $nav_item.getName()
+					</a>
+					<a href="javascript:;" class="toggle" id="$drop" data-status="0"><i class="fa fa-caret-down" aria-hidden="true"></i></i></a>
+					<div style="clear:both"></div>	
+					<a href="$nav_item.getURL()" class="parrent-menu">
+						$nav_item.icon() $nav_item.getName()
+						<i class="fa fa-caret-down" aria-hidden="true"></i>
+					</a>
+					<div style="clear:both;"></div>
+					<ul class="sub-menu" id="drop-$drop">
+						#set ($drop = $drop + 1)
+						#foreach ($nav_child in $nav_item.getChildren())
+							#if ($nav_child.isSelected())
+								<li class="selected">
+							#else
+								<li>
+							#end
+								#if($nav_child.hasChildren())
+									<a href="$nav_child.getURL()" class="drop-addon">
+										$nav_child.getName()
+									</a>
+									<a href="javascript:;" class="toggle" id="$drop" data-status="0"><i class="fa fa-caret-down" aria-hidden="true"></i></i></a>
+									<div style="clear:both"></div>
+									<a href="$nav_child.getURL()" class="parrent-menu">
+										$nav_child.getName()
+										<i class="fa fa-caret-down" aria-hidden="true"></i>
+									</a>
+									<ul class="child-menu" id="drop-$drop">
+										#set ($drop = $drop + 1)
+										#foreach ($nav_child_ele in $nav_child.getChildren())
+											#if ($nav_child_ele.isSelected())
+												<li class="selected">
+											#else
+												<li>
+											#end
+												<a href="$nav_child_ele.getURL()" $nav_child_ele.getTarget()>$nav_child_ele.icon() $nav_child_ele.getName()</a>
+											</li>	
+										#end
+									</ul>
+								#else
+									<a href="$nav_child.getURL()" $nav_child.getTarget()>$nav_child.icon() $nav_child.getName()</a>
+								#end
+							</li>
+						#end
+					</ul>
+				#else
+					<a href="$nav_item.getURL()" $nav_child.getTarget()>
+						$nav_item.icon() $nav_item.getName()
+					</a>
+				#end
+			</li>
+		#end
+	</ul>
+	<a id="show-menu" href="javascript:;" data-status="0"><i class="fa fa-tasks"></i></a>
+</div>

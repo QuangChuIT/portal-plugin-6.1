@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="com.bkav.portlet.article.link.service.ArticleLinkEntryLocalService" class="com.bkav.portlet.article.link.service.impl.ArticleLinkEntryLocalServiceImpl" />
+	<bean id="com.bkav.portlet.article.link.service.ArticleLinkEntryService" class="com.bkav.portlet.article.link.service.impl.ArticleLinkEntryServiceImpl" />
+	<bean id="com.bkav.portlet.article.link.service.persistence.ArticleLinkEntryPersistence" class="com.bkav.portlet.article.link.service.persistence.ArticleLinkEntryPersistenceImpl" parent="basePersistence" />
+</beans>
